@@ -6,4 +6,8 @@
 //  Copyright © 2020 Brandon Hancock. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ItemStore {
+    var allItems = [Item()]
+}
