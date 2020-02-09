@@ -73,4 +73,17 @@ class ItemsViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        //If the table view is asking for the commit to be a deletion from the table
+        if editingStyle == .delete {
+            let item = itemStore.allItems[indexPath.row]
+            
+            //Remove the item from the itemStore
+            itemStore.removeItem(item)
+            
+            //Now remove the row from the table with a nice animation
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
 }
