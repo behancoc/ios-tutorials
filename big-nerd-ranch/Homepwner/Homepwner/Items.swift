@@ -24,7 +24,7 @@ class Item: NSObject {
     }
     
     convenience init(random:Bool = false) {
-        if random {
+        if random == true {
             let adjectives = ["Fluffy", "Rusty", "Shiny"]
             let nouns = ["Bear", "Spork", "Mac"]
             
@@ -41,7 +41,6 @@ class Item: NSObject {
             
             self.init(name: randomName, serialNumber: randomSerialNumber, valueInDollars: randomValue)
         }
-        
         else {
             self.init(name: "", serialNumber: nil, valueInDollars: 0)
         }

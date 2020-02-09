@@ -9,7 +9,7 @@
 import UIKit
 
 class ItemStore {
-    var allItems = [Item()]
+    var allItems = [Item(random: true)]
         
     @discardableResult func createItem() -> Item  {
         let newItem = Item(random: true)
