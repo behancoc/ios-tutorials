@@ -79,15 +79,15 @@ class ItemsViewController: UITableViewController {
         if editingStyle == .delete {
             let item = itemStore.allItems[indexPath.row]
             
-            let title = "Delete \(item.name)?"
-            let message = "Are you sure you want to delete this item?"
+            let title = "Remove \(item.name)?"
+            let message = "Are you sure you want to remove this item?"
             
             let actionSheet = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
             
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
             actionSheet.addAction(cancelAction)
             
-            let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: {(action) -> Void in
+            let deleteAction = UIAlertAction(title: "Remove", style: .destructive, handler: {(action) -> Void in
                 //Remove the item from the store
                 self.itemStore.removeItem(item)
                 
@@ -107,5 +107,9 @@ class ItemsViewController: UITableViewController {
         //Update the model
         itemStore.moveItem(from: sourceIndexPath.row, to: destinationIndexPath.row)
         
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "Remove"
     }
 }
