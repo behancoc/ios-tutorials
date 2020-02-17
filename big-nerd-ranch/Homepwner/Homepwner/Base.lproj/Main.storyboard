@@ -53,7 +53,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6m-k0-gLy">
                                             <rect key="frame" x="20" y="11" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -64,8 +64,8 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqs-bq-PAK">
-                                            <rect key="frame" x="20" y="40" width="36" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <rect key="frame" x="20" y="42.5" width="31" height="14.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -75,6 +75,7 @@
                                         <constraint firstItem="d6m-k0-gLy" firstAttribute="top" secondItem="km5-Gq-Tba" secondAttribute="topMargin" id="IFC-gr-sQG"/>
                                         <constraint firstItem="d6m-k0-gLy" firstAttribute="leading" secondItem="km5-Gq-Tba" secondAttribute="leadingMargin" id="Mrm-6R-tWj"/>
                                         <constraint firstItem="Uqs-bq-PAK" firstAttribute="leading" secondItem="d6m-k0-gLy" secondAttribute="leading" id="QsD-FG-pr2"/>
+                                        <constraint firstItem="Uqs-bq-PAK" firstAttribute="top" secondItem="d6m-k0-gLy" secondAttribute="bottom" constant="10.5" id="Ync-JX-0hJ"/>
                                         <constraint firstAttribute="bottom" secondItem="Uqs-bq-PAK" secondAttribute="bottom" constant="8" id="iUs-U2-kRw"/>
                                         <constraint firstAttribute="trailing" secondItem="H4R-BK-mdd" secondAttribute="trailing" constant="20" id="pjj-Xe-H6C"/>
                                     </constraints>
