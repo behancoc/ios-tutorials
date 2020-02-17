@@ -22,5 +22,4 @@ class ItemCell: UITableViewCell {
         serialNumberLabel.adjustsFontForContentSizeCategory = true
         valueLabel.adjustsFontForContentSizeCategory = true
     }
-    
 }
