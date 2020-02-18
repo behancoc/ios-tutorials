@@ -85,6 +85,7 @@
                                     <outlet property="nameLabel" destination="d6m-k0-gLy" id="kjI-f7-mqN"/>
                                     <outlet property="serialNumberLabel" destination="Uqs-bq-PAK" id="XRl-h9-y8S"/>
                                     <outlet property="valueLabel" destination="H4R-BK-mdd" id="vxf-EK-Sw1"/>
+                                    <segue destination="oKE-bG-Nlq" kind="show" id="QKX-EY-eD8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -98,16 +99,16 @@
             </objects>
             <point key="canvasLocation" x="162" y="72"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="P7Z-br-9t4">
             <objects>
-                <viewController id="oKE-bG-Nlq" sceneMemberID="viewController">
+                <viewController id="oKE-bG-Nlq" customClass="DetailViewController" customModule="Homepwner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EOm-qd-SM4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="exK-CT-VNC">
-                                <rect key="frame" x="20" y="52" width="374" height="802"/>
+                                <rect key="frame" x="20" y="8" width="374" height="792"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jCB-AJ-mfm">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -158,7 +159,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCi-pa-aQA">
-                                        <rect key="frame" x="0.0" y="126" width="374" height="676"/>
+                                        <rect key="frame" x="0.0" y="126" width="374" height="666"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -179,6 +180,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rL0-bo-Psa"/>
                     </view>
+                    <navigationItem key="navigationItem" id="CA5-I5-MF7"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="NCi-pa-aQA" id="feM-Kn-n2S"/>
+                        <outlet property="nameField" destination="zq1-jg-1Bo" id="FRo-2T-O3q"/>
+                        <outlet property="serialNumberField" destination="JhQ-3o-83Q" id="hyg-9E-Vb3"/>
+                        <outlet property="valueField" destination="cuL-pf-WXq" id="NDT-WN-zVB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6B-wR-HtO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
