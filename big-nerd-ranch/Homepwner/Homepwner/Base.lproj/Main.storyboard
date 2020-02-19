@@ -85,7 +85,7 @@
                                     <outlet property="nameLabel" destination="d6m-k0-gLy" id="kjI-f7-mqN"/>
                                     <outlet property="serialNumberLabel" destination="Uqs-bq-PAK" id="XRl-h9-y8S"/>
                                     <outlet property="valueLabel" destination="H4R-BK-mdd" id="vxf-EK-Sw1"/>
-                                    <segue destination="oKE-bG-Nlq" kind="show" id="QKX-EY-eD8"/>
+                                    <segue destination="oKE-bG-Nlq" kind="show" identifier="showItem" id="QKX-EY-eD8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

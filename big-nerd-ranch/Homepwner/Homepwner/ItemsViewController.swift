@@ -57,6 +57,23 @@ class ItemsViewController: UITableViewController {
         tableView.estimatedRowHeight = 65
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //If the triggered segue is the show item segue
+        switch segue.identifier {
+        case "showItem"?:
+            //Figure out which row was just tapped
+            if let row = tableView.indexPathForSelectedRow?.row {
+                
+                //Get item associated with this row and pass it along
+                let item = itemStore.allItems[row]
+                let detailViewController = segue.destination as! DetailViewController
+                detailViewController.item = item
+            }
+        default:
+            preconditionFailure("Unexpected segue identifier.")
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemStore.allItems.count
     }
