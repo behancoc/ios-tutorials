@@ -176,6 +176,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="rL0-bo-Psa" firstAttribute="trailing" secondItem="exK-CT-VNC" secondAttribute="trailing" constant="20" id="e66-yV-FQs"/>
                             <constraint firstItem="exK-CT-VNC" firstAttribute="leading" secondItem="rL0-bo-Psa" secondAttribute="leading" constant="20" id="isK-JT-t4t"/>
@@ -183,6 +184,9 @@
                             <constraint firstItem="exK-CT-VNC" firstAttribute="top" secondItem="rL0-bo-Psa" secondAttribute="top" constant="8" id="vsF-dK-dfI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rL0-bo-Psa"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="pNd-Xz-DKg" appends="YES" id="LK8-fX-04D"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="CA5-I5-MF7"/>
                     <connections>
@@ -193,6 +197,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6B-wR-HtO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="pNd-Xz-DKg">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="oKE-bG-Nlq" id="mIR-me-nm7"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1850.7246376811595" y="71.651785714285708"/>
         </scene>
