@@ -15,38 +15,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="CNC-Nc-UvE">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sT-6R-lm1">
-                                    <rect key="frame" x="211" y="15" width="195" height="30"/>
-                                    <state key="normal" title="Add"/>
-                                    <connections>
-                                        <action selector="addNewItem:" destination="hvg-z7-TYj" eventType="touchUpInside" id="Ue8-Bc-KYZ"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kT8-iq-DfR">
-                                    <rect key="frame" x="8" y="15" width="195" height="30"/>
-                                    <state key="normal" title="Edit"/>
-                                    <connections>
-                                        <action selector="toogleEditButton:" destination="hvg-z7-TYj" eventType="touchUpInside" id="4dW-3W-hXR"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            <constraints>
-                                <constraint firstItem="2sT-6R-lm1" firstAttribute="width" secondItem="kT8-iq-DfR" secondAttribute="width" id="CNM-uB-mGF"/>
-                                <constraint firstAttribute="trailing" secondItem="2sT-6R-lm1" secondAttribute="trailing" constant="8" id="PCy-W3-JDP"/>
-                                <constraint firstItem="2sT-6R-lm1" firstAttribute="centerY" secondItem="CNC-Nc-UvE" secondAttribute="centerY" id="bJZ-uM-SvT"/>
-                                <constraint firstItem="kT8-iq-DfR" firstAttribute="centerY" secondItem="CNC-Nc-UvE" secondAttribute="centerY" id="cSN-KV-ktb"/>
-                                <constraint firstItem="2sT-6R-lm1" firstAttribute="leading" secondItem="kT8-iq-DfR" secondAttribute="trailing" constant="8" id="fy3-vg-5Ru"/>
-                                <constraint firstItem="kT8-iq-DfR" firstAttribute="leading" secondItem="CNC-Nc-UvE" secondAttribute="leading" constant="8" id="qzj-n7-KAe"/>
-                            </constraints>
-                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="65" id="ybb-Vo-Deb" customClass="ItemCell" customModule="Homepwner" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="88" width="414" height="65"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ybb-Vo-Deb" id="km5-Gq-Tba">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
@@ -94,7 +65,13 @@
                             <outlet property="delegate" destination="hvg-z7-TYj" id="Kis-bK-6QJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Homepwner" id="P89-xU-1Xt"/>
+                    <navigationItem key="navigationItem" title="Homepwner" id="P89-xU-1Xt">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fGk-RH-6Dz">
+                            <connections>
+                                <action selector="addNewItem:" destination="hvg-z7-TYj" id="fHQ-AZ-wF5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vjh-cv-GeE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

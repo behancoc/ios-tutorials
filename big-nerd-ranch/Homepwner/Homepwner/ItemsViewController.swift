@@ -12,7 +12,7 @@ class ItemsViewController: UITableViewController {
     
     var itemStore: ItemStore!
     
-    @IBAction func addNewItem(_ sender:UIButton) {
+    @IBAction func addNewItem(_ sender:UIBarButtonItem) {
         //Creating new item to add to the store
         let newItem = itemStore.createItem()
         
@@ -25,32 +25,14 @@ class ItemsViewController: UITableViewController {
         }
     }
     
-    @IBAction func toogleEditButton(_ sender:UIButton) {
-        //If currently in  editing mode...
-        if isEditing {
-            //Change the text of the button to inform the user state
-            sender.setTitle("Edit", for: .normal)
-            
-            //Turn of editing mode
-            setEditing(false, animated: true)
-        } else {
-            //Change the text of the button to inform the user state
-            sender.setTitle("Done", for: .normal)
-            
-            //Enter editing mode
-            setEditing(true, animated: true)
-        }
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        navigationItem.leftBarButtonItem = editButtonItem
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //get the height of the status bar
-        let statusBarHeight = UIApplication.shared.statusBarFrame.height
-        
-        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
-        tableView.contentInset = insets
-        tableView.scrollIndicatorInsets = insets
         
         //tableView.rowHeight = 65
         tableView.rowHeight = UITableView.automaticDimension
