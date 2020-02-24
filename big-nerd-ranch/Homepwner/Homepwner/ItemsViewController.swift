@@ -104,6 +104,9 @@ class ItemsViewController: UITableViewController {
                 //Remove the item from the store
                 self.itemStore.removeItem(item)
                 
+                //Remove the item's image from image store cache
+                self.imageStore.deleteImage(forKey: item.itemKey)
+                
                 //Also remove that row from the tableview
                 self.tableView.deleteRows(at: [indexPath], with: .automatic)
             })
