@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B402FFE24039D0E00853BA2 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B402FFD24039D0E00853BA2 /* ImageStore.swift */; };
 		8B4958E923E5721A0079BE77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B4958E723E5721A0079BE77 /* Main.storyboard */; };
 		8B4958EB23E5721D0079BE77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B4958EA23E5721D0079BE77 /* Assets.xcassets */; };
 		8B4958EE23E5721D0079BE77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B4958EC23E5721D0079BE77 /* LaunchScreen.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B402FFD24039D0E00853BA2 /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		8B4958DE23E5721A0079BE77 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B4958E123E5721A0079BE77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B4958E823E5721A0079BE77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				8B49591523E606DD0079BE77 /* ItemStore.swift */,
 				8B53CDAD23FA329100536212 /* ItemCell.swift */,
 				8BF80BEC23FBB85E009CF187 /* DetailViewController.swift */,
+				8B402FFD24039D0E00853BA2 /* ImageStore.swift */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				8B49591623E606DD0079BE77 /* ItemStore.swift in Sources */,
 				8BF80BED23FBB85E009CF187 /* DetailViewController.swift in Sources */,
 				8B49591923E60BE90079BE77 /* AppDelegate.swift in Sources */,
+				8B402FFE24039D0E00853BA2 /* ImageStore.swift in Sources */,
 				8B53CDAE23FA329100536212 /* ItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

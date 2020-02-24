@@ -46,6 +46,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         }
     }
     
+    var imageStore: ImageStore!
+    
     
     
     let numberFormatter: NumberFormatter = {
