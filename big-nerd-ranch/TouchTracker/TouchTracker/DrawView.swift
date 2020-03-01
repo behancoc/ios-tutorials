@@ -46,15 +46,23 @@ class DrawView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(DrawView.doubleTap(_:)))
+        let doubleTapRecognizer = UITapGestureRecognizer(target: self,
+                                                         action:#selector(DrawView.doubleTap(_:)))
         doubleTapRecognizer.numberOfTapsRequired = 2
         doubleTapRecognizer.delaysTouchesBegan = true
         addGestureRecognizer(doubleTapRecognizer)
         
-        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(DrawView.tap(_:)))
+        let tapRecognizer = UITapGestureRecognizer(target: self,
+                                                   action: #selector(DrawView.tap(_:)))
         tapRecognizer.delaysTouchesBegan = true
         tapRecognizer.require(toFail: doubleTapRecognizer)
         addGestureRecognizer(tapRecognizer)
+        
+        let longPressRecognizer = UILongPressGestureRecognizer(target: self,
+                                                               action: #selector(DrawView.longPres(_:)))
+        addGestureRecognizer(longPressRecognizer)
+        
+        
     }
     
     @objc func doubleTap(_ gestureRecognizer: UIGestureRecognizer) {
@@ -92,6 +100,24 @@ class DrawView: UIView {
         } else {
             // Hide the menu if a line isn't selected
             menu.setMenuVisible(false, animated: true)
+        }
+        
+        setNeedsDisplay()
+    }
+    
+    @objc func longPres(_ gestureRecognizer: UIGestureRecognizer) {
+        print("Long press detected!")
+        
+        if gestureRecognizer.state == .began {
+            let point = gestureRecognizer.location(in: self)
+            
+            selectedLineIndex = indexOfLine(at: point)
+            
+            selectedLineIndex != nil; do {
+                self.currentLines.removeAll()
+            }
+        } else if gestureRecognizer.state == .ended {
+            selectedLineIndex = nil
         }
         
         setNeedsDisplay()
