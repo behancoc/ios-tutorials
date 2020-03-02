@@ -6,3 +6,9 @@
 //  Copyright © 2020 Brandon Hancock. All rights reserved.
 //
 
+import UIKit
+
+class PhotosViewController: UIViewController {
+    
+    @IBOutlet var imageView: UIImageView!
+}
