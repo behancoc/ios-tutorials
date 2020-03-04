@@ -16,6 +16,7 @@
 		8BB176B9240D62B30082EFCC /* PhotoramaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB176B8240D62B30082EFCC /* PhotoramaUITests.swift */; };
 		8BB176C7240D64CD0082EFCC /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB176C6240D64CD0082EFCC /* PhotosViewController.swift */; };
 		8BB176C9240E3B9E0082EFCC /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB176C8240E3B9E0082EFCC /* FlickrAPI.swift */; };
+		8BCA6BC9240F790400F18A1D /* PhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA6BC8240F790400F18A1D /* PhotoStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		8BB176BA240D62B30082EFCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BB176C6240D64CD0082EFCC /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		8BB176C8240E3B9E0082EFCC /* FlickrAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
+		8BCA6BC8240F790400F18A1D /* PhotoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				8BB176A4240D62B20082EFCC /* Info.plist */,
 				8BB176C6240D64CD0082EFCC /* PhotosViewController.swift */,
 				8BB176C8240E3B9E0082EFCC /* FlickrAPI.swift */,
+				8BCA6BC8240F790400F18A1D /* PhotoStore.swift */,
 			);
 			path = Photorama;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BCA6BC9240F790400F18A1D /* PhotoStore.swift in Sources */,
 				8BB176C7240D64CD0082EFCC /* PhotosViewController.swift in Sources */,
 				8BB17697240D62B10082EFCC /* AppDelegate.swift in Sources */,
 				8BB17699240D62B10082EFCC /* SceneDelegate.swift in Sources */,
