@@ -20,6 +20,8 @@ class PhotoStore {
         let url = FlickrAPI.interestingPhotosURL
         let request = URLRequest(url: url)
         
+        print(request)
+        
         let task = session.dataTask(with: request) {
             (data, response, error) -> Void in
             if let jsonData = data {
