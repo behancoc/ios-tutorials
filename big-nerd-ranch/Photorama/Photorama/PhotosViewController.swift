@@ -18,7 +18,7 @@ class PhotosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.dataSource = photoDataSouce
+        collectionView.dataSource = photoDataSouce  
         
         store.fetchInterestingPhotos {(photosResult) -> Void in
             switch photosResult {

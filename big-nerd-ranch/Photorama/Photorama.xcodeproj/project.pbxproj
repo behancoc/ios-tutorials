@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B4507FF24160C4200C7CE51 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4507FE24160C4200C7CE51 /* PhotoCollectionViewCell.swift */; };
 		8B6A5B872414D1980081BC3F /* PhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6A5B862414D1980081BC3F /* PhotoDataSource.swift */; };
 		8BB17697240D62B10082EFCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB17696240D62B10082EFCC /* AppDelegate.swift */; };
 		8BB1769E240D62B10082EFCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB1769C240D62B10082EFCC /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B4507FE24160C4200C7CE51 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		8B6A5B862414D1980081BC3F /* PhotoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDataSource.swift; sourceTree = "<group>"; };
 		8BB17693240D62B10082EFCC /* Photorama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photorama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB17696240D62B10082EFCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				8BCA6BC8240F790400F18A1D /* PhotoStore.swift */,
 				8BF5859E2410DC8E00FEB636 /* Photo.swift */,
 				8B6A5B862414D1980081BC3F /* PhotoDataSource.swift */,
+				8B4507FE24160C4200C7CE51 /* PhotoCollectionViewCell.swift */,
 			);
 			path = Photorama;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				8B6A5B872414D1980081BC3F /* PhotoDataSource.swift in Sources */,
 				8BB176C9240E3B9E0082EFCC /* FlickrAPI.swift in Sources */,
 				8BF5859F2410DC8E00FEB636 /* Photo.swift in Sources */,
+				8B4507FF24160C4200C7CE51 /* PhotoCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
