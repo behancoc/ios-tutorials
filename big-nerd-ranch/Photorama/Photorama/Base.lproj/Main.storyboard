@@ -26,14 +26,35 @@
                                     <inset key="sectionInset" minX="2" minY="2" maxX="2" maxY="2"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UICollectionViewCell" id="oaC-1H-amj">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCollectionViewCell" id="oaC-1H-amj" customClass="PhotoCollectionViewCell" customModule="Photorama" customModuleProvider="target">
                                         <rect key="frame" x="2" y="2" width="90" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FbE-fJ-nJb">
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ANe-kr-aOD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="90" height="50"/>
+                                                </imageView>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="uJR-sT-YRh">
+                                                    <rect key="frame" x="35" y="15" width="20" height="20"/>
+                                                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="ANe-kr-aOD" secondAttribute="bottom" id="4HJ-m3-hGR"/>
+                                                <constraint firstItem="ANe-kr-aOD" firstAttribute="leading" secondItem="FbE-fJ-nJb" secondAttribute="leading" id="FXi-nM-WRZ"/>
+                                                <constraint firstItem="uJR-sT-YRh" firstAttribute="centerY" secondItem="FbE-fJ-nJb" secondAttribute="centerY" id="RLv-48-naN"/>
+                                                <constraint firstItem="ANe-kr-aOD" firstAttribute="top" secondItem="FbE-fJ-nJb" secondAttribute="top" id="Rj8-NO-QZn"/>
+                                                <constraint firstItem="ANe-kr-aOD" firstAttribute="trailing" secondItem="FbE-fJ-nJb" secondAttribute="trailing" id="fXX-ab-9t6"/>
+                                                <constraint firstItem="uJR-sT-YRh" firstAttribute="centerX" secondItem="FbE-fJ-nJb" secondAttribute="centerX" id="yXh-qu-xrD"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="ANe-kr-aOD" id="KHf-Wc-Mga"/>
+                                            <outlet property="spinner" destination="uJR-sT-YRh" id="QU3-PK-qZ0"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
