@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotosViewController: UIViewController {
+class PhotosViewController: UIViewController, UICollectionViewDelegate {
     
     @IBOutlet var collectionView: UICollectionView!
     
@@ -18,7 +18,8 @@ class PhotosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.dataSource = photoDataSouce  
+        collectionView.dataSource = photoDataSouce
+        collectionView.delegate = self
         
         store.fetchInterestingPhotos {(photosResult) -> Void in
             switch photosResult {
@@ -32,6 +33,27 @@ class PhotosViewController: UIViewController {
                 self.photoDataSouce.photos.removeAll()
             }
             self.collectionView.reloadSections(IndexSet(integer: 0))
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        let photo = photoDataSouce.photos[indexPath.row]
+        
+        //Download the image, data, which could take some time
+        store.fetchImage(for: photo) { (result) -> Void in
+            
+            // The index path for the photo might have changed between the time the request started and finished
+            // So find the most recent path
+            guard let photoIndex = self.photoDataSouce.photos.firstIndex(of: photo),
+                case let .success(image) = result else {
+                    return
+            }
+            let photoIndexPath = IndexPath(item: photoIndex, section: 0)
+            
+            //When the request finishes, only update the cell if it's still visible
+            if let cell = self.collectionView.cellForItem(at: photoIndexPath) as? PhotoCollectionViewCell {
+                cell.update(with: image)
+            }
         }
     }
     
