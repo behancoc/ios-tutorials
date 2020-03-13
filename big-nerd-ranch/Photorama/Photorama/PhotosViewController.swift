@@ -21,6 +21,8 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
         collectionView.dataSource = photoDataSouce
         collectionView.delegate = self
         
+        updateDataSource()
+        
         store.fetchInterestingPhotos {(photosResult) -> Void in
             self.updateDataSource()
         }
