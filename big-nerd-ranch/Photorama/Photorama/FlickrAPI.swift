@@ -105,6 +105,19 @@ struct FlickrAPI {
                 //We don't have enough information to construct a photo, so return nil
                 return nil
         }
+        
+        let fetchRequest: NSFetchRequest<Photo> = Photo.fetchRequest()
+        let predicate = NSPredicate(format: "\(#keyPath(Photo.photoID)) == \(photoID)")
+        fetchRequest.predicate = predicate
+        
+        var fetchedPhotos: [Photo]?
+        context.performAndWait {
+            fetchedPhotos = try? fetchRequest.execute()
+        }
+        if let exisitingPhoto = fetchedPhotos?.first {
+            return exisitingPhoto
+        }
+        
         var photo: Photo!
         context.performAndWait {
             photo = Photo(context: context)
