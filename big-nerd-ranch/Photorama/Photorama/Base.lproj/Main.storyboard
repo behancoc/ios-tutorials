@@ -87,15 +87,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O5g-ec-VNl">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dlT-Mx-qje">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem title="Tags" id="Uxs-bn-Dz5"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="O5g-ec-VNl" firstAttribute="leading" secondItem="4XH-56-VZB" secondAttribute="leading" id="62G-Y7-drd"/>
-                            <constraint firstItem="4XH-56-VZB" firstAttribute="trailing" secondItem="O5g-ec-VNl" secondAttribute="trailing" id="8r3-By-KwA"/>
-                            <constraint firstItem="O5g-ec-VNl" firstAttribute="top" secondItem="4XH-56-VZB" secondAttribute="top" id="QES-ef-H2h"/>
-                            <constraint firstItem="4XH-56-VZB" firstAttribute="bottom" secondItem="O5g-ec-VNl" secondAttribute="bottom" id="dgh-xC-YIt"/>
+                            <constraint firstItem="O5g-ec-VNl" firstAttribute="top" secondItem="4XH-56-VZB" secondAttribute="top" id="V8e-C3-Me4"/>
+                            <constraint firstItem="O5g-ec-VNl" firstAttribute="trailing" secondItem="4XH-56-VZB" secondAttribute="trailing" id="WcC-Lq-QHF"/>
+                            <constraint firstItem="O5g-ec-VNl" firstAttribute="leading" secondItem="4XH-56-VZB" secondAttribute="leading" id="Zer-ch-4nt"/>
+                            <constraint firstItem="dlT-Mx-qje" firstAttribute="leading" secondItem="4XH-56-VZB" secondAttribute="leading" id="kAN-x4-YLL"/>
+                            <constraint firstItem="dlT-Mx-qje" firstAttribute="top" secondItem="O5g-ec-VNl" secondAttribute="bottom" symbolic="YES" id="kJo-Ti-tbB"/>
+                            <constraint firstItem="dlT-Mx-qje" firstAttribute="bottom" secondItem="4XH-56-VZB" secondAttribute="bottom" id="qwf-Qd-aev"/>
+                            <constraint firstItem="dlT-Mx-qje" firstAttribute="trailing" secondItem="4XH-56-VZB" secondAttribute="trailing" id="uVg-XB-6l7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4XH-56-VZB"/>
                     </view>
@@ -106,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kvz-RY-i5c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1896" y="138"/>
+            <point key="canvasLocation" x="1895.6521739130437" y="137.94642857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QpA-w1-xUf">

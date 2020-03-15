@@ -24,6 +24,11 @@ enum PhotosResult {
     case failure (Error)
 }
 
+enum TagsResult {
+    case success([Tag])
+    case failure(Error)
+}
+
 class PhotoStore {
     let imageStore = ImageStore()
     
@@ -106,6 +111,40 @@ class PhotoStore {
         task.resume()
     }
     
+    func fetchAllPhotos(completion: @escaping (PhotosResult) -> Void) {
+        let fetchRequest: NSFetchRequest<Photo> = Photo.fetchRequest()
+        
+        let sortByDateTaken = NSSortDescriptor(key: #keyPath(Photo.dateTaken), ascending: true)
+        fetchRequest.sortDescriptors = [sortByDateTaken]
+        
+        let viewContext = persistentContainer.viewContext
+        viewContext.perform {
+            do {
+                let allPhotos = try viewContext.fetch(fetchRequest)
+                completion(.success(allPhotos))
+            } catch {
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func fetchAllTags(completion: @escaping (TagsResult) -> Void) {
+        let fetchRequest: NSFetchRequest<Tag> = Tag.fetchRequest()
+        let sortByName = NSSortDescriptor(key: #keyPath(Tag.name), ascending: true)
+        
+        fetchRequest.sortDescriptors = [sortByName]
+        
+        let viewContext = persistentContainer.viewContext
+        viewContext.perform {
+            do {
+                let allTags = try fetchRequest.execute()
+                completion(.success(allTags))
+            } catch {
+                completion(.failure(error))
+            }
+        }
+    }
+    
     
     private func processPhotosRequest(data: Data?, error: Error?) -> PhotosResult {
         guard let jsonData = data else {
@@ -124,22 +163,5 @@ class PhotoStore {
             }
         }
         return .success(image)
-    }
-    
-    func fetchAllPhotos(completion: @escaping (PhotosResult) -> Void) {
-        let fetchRequest: NSFetchRequest<Photo> = Photo.fetchRequest()
-        
-        let sortByDateTaken = NSSortDescriptor(key: #keyPath(Photo.dateTaken), ascending: true)
-        fetchRequest.sortDescriptors = [sortByDateTaken]
-        
-        let viewContext = persistentContainer.viewContext
-        viewContext.perform {
-            do {
-                let allPhotos = try viewContext.fetch(fetchRequest)
-                completion(.success(allPhotos))
-            } catch {
-                completion(.failure(error))
-            }
-        }
     }
 }
